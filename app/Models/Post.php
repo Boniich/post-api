@@ -108,7 +108,7 @@ class Post extends Model
 
             $post->update();
 
-            return okResponse200($post, "Post updated succesfully");
+            return okResponse200($post, "Post updated successfully");
         } catch (ModelNotFoundException) {
             return notFoundData404("Post not found");
         }
@@ -122,7 +122,7 @@ class Post extends Model
 
             $post->delete();
 
-            return okResponse200($post, "Post deleted succesfully");
+            return okResponse200($post, "Post deleted successfully");
         } catch (ModelNotFoundException) {
             return notFoundData404("Post not found");
         }
