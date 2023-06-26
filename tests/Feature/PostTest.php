@@ -41,7 +41,7 @@ class PostTest extends TestCase
     public function test_store_a_new_post_succesfully()
     {
         $response = $this->post($this->path, [
-            'id' => 2,
+            'id' => 5,
             'title' => 'test post',
             'slug' => 'test slug',
             'content' => 'test content',
@@ -50,7 +50,7 @@ class PostTest extends TestCase
             'draf_status' => 'draf_status'
         ]);
 
-        $response->assertJson(['success' => true, 'data' => ['id' => 2, 'title' => 'test post'], 'message' => 'Post created successfully'])->assertStatus(201);
+        $response->assertJson(['success' => true, 'data' => ['id' => 5, 'title' => 'test post'], 'message' => 'Post created successfully'])->assertStatus(201);
     }
 
     public function test_bad_request_at_store_a_new_post()
