@@ -14,7 +14,7 @@ class Post extends Model
 
     public static function getPosts()
     {
-        $posts = Post::all();
+        $posts = Post::first('publish_date')->paginate(1);
 
         $posts->makeHidden('draf_status');
 
